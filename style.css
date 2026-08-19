@@ -19,9 +19,9 @@ body {
 
     overflow-x: hidden;
 
-    background: #102a43;
+    background: #ffffff;
 
-    color: white;
+    color: rgb(0, 0, 0);
 
     font-family: "Cairo", sans-serif;
 }
@@ -243,7 +243,7 @@ body {
     color: #a78327;
 
     font-family:
-        "Great Vibes",
+        "Libre Baskerville",
         cursive;
 
     font-size: 54px;
@@ -374,7 +374,7 @@ body {
     color: #a78327;
 
     font-family:
-        "Great Vibes",
+        "Reem Kufi",
         cursive;
 
     font-size:
@@ -749,7 +749,7 @@ body {
         100px 20px;
 
     background:
-        #102a43;
+        #ffffff;
 
     overflow: hidden;
 }
@@ -789,7 +789,7 @@ body {
     margin-bottom: 5px;
 
     color:
-        rgba(255,255,255,.55);
+        rgba(2, 2, 2, 0.55);
 
     font-size: 11px;
 
@@ -799,7 +799,7 @@ body {
 
 .section-title h2 {
 
-    color: white;
+    color: rgb(0, 0, 0);
 
     font-family:
         "Great Vibes",
@@ -1097,7 +1097,7 @@ body {
     background:
         transparent;
 
-    color: white;
+    color: rgb(49, 49, 49);
 
     font-family:
         "Cairo",
@@ -1421,7 +1421,7 @@ body {
     }
 
 }
-   /* ========================================
+/* ========================================
    تصغير كارت الدعوة على الموبايل
 ======================================== */
 
@@ -1527,4 +1527,307 @@ body {
     }
 
 }
+
+/*==========================
+Cover Card
+===========================*/
+
+.cover-card{
+
+width:min(420px,92%);
+
+margin:40px auto;
+
+background:#f9f7f2;
+
+border:1px solid #d8c7a2;
+
+padding:70px 30px;
+
+position:relative;
+
+text-align:center;
+
+box-shadow:0 15px 40px rgba(0,0,0,.2);
+
+overflow:hidden;
+
+}
+
+
+.cover-flower{
+
+position:absolute;
+
+width:120px;
+
+height:180px;
+
+background-size:contain;
+
+background-repeat:no-repeat;
+
+opacity:.95;
+
+}
+
+.flower-left{
+
+left:-5px;
+
+top:-5px;
+
+background-image:url("images/flower-left.png");
+
+}
+
+.flower-right{
+
+right:-5px;
+
+bottom:20px;
+
+background-image:url("images/flower-right.png");
+
+}
+
+.cover-heart{
+
+width:70px;
+
+height:70px;
+
+margin:auto;
+
+border-radius:50%;
+
+background:#173760;
+
+color:#fff;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:28px;
+
+animation:heartBeat 2s infinite;
+
+margin-bottom:35px;
+
+}
+
+.cover-small{
+
+letter-spacing:4px;
+
+font-size:11px;
+
+color:#9d8350;
+
+}
+
+.cover-title{
+
+margin:20px 0;
+
+color:#0d2143;
+
+}
+
+.cover-names{
+
+font-size:52px;
+
+margin:15px 0;
+
+font-family:"Cormorant Garamond",serif;
+
+color:#18345f;
+
+}
+
+.cover-date{
+
+margin:25px 0;
+
+font-size:20px;
+
+color:#7f6941;
+
+}
+
+.cover-text{
+
+line-height:2;
+
+margin-bottom:35px;
+
+}
+
+.cover-button{
+
+padding:15px 45px;
+
+background:#173760;
+
+color:#fff;
+
+border:none;
+
+cursor:pointer;
+
+font-size:18px;
+
+transition:.3s;
+
+}
+
+.cover-button:hover{
+
+transform:translateY(-4px);
+
+}
+/*==========================
+Henna V2
+==========================*/
+
+.henna-card{
+
+max-width:650px;
+
+margin:auto;
+
+padding:55px 35px;
+
+background:#faf8f4;
+
+border:1px solid #ddd2bf;
+
+text-align:center;
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.henna-en{
+
+letter-spacing:4px;
+
+font-size:11px;
+
+color:#9d8350;
+
+margin-bottom:18px;
+
+}
+
+.henna-ar{
+
+font-size:42px;
+
+color:#142b50;
+
+margin-bottom:25px;
+
+}
+
+}
+
+.henna-place{
+
+font-size:22px;
+
+margin-bottom:35px;
+
+color:#333;
+
+}
+
+.henna-line{
+
+height:1px;
+
+background:#d9d1c1;
+
+margin:35px 0;
+
+}
+
+.henna-info{
+
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+text-align:right;
+
+}
+
+.henna-icon{
+
+font-size:28px;
+
+color:#9d8350;
+
+}
+
+.henna-info strong{
+
+display:block;
+
+font-size:22px;
+
+color:#1d2d4f;
+
+margin-bottom:8px;
+
+}
+
+.henna-info small{
+
+color:#8f8f8f;
+
+font-size:15px;
+
+}
+
+@media(max-width:600px){
+
+.henna-card{
+
+padding:40px 22px;
+
+}
+
+.henna-ar{
+
+font-size:30px;
+
+}
+
+.henna-place{
+
+font-size:18px;
+
+}
+
+.henna-info{
+
+flex-direction:row;
+
+gap:12px;
+
+}
+
+.henna-info strong{
+
+font-size:16px;
+
+}
+
 }

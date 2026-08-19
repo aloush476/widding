@@ -248,4 +248,142 @@ const arabicDays = [
 
 groomHennaDateText.textContent =
     `${arabicDays[groomHennaDate.getDay()]}، ${groomHennaDay} ${monthNames[groomHennaMonth]} ${groomHennaYear}`;
+
+    /* ========================================
+   حنة نيره
+======================================== */
+
+const brideHennaYear = 2026;
+
+const brideHennaMonth = 9;
+
+const brideHennaDay = 22;
+
+const brideHennaHour = 20;
+
+const brideHennaMinute = 0;
+
+
+/* ========================================
+   Calendar حنة نيره
+======================================== */
+
+const brideHennaDays =
+    document.getElementById(
+        "brideHennaDays"
+    );
+
+
+const brideHennaMonthTitle =
+    document.getElementById(
+        "brideHennaMonth"
+    );
+
+
+const brideHennaDateText =
+    document.getElementById(
+        "brideHennaDateText"
+    );
+
+
+brideHennaMonthTitle.textContent =
+    `${monthNames[brideHennaMonth]} ${brideHennaYear}`;
+
+
+const brideFirstDay =
+    new Date(
+        brideHennaYear,
+        brideHennaMonth,
+        1
+    ).getDay();
+
+
+const brideDaysInMonth =
+    new Date(
+        brideHennaYear,
+        brideHennaMonth + 1,
+        0
+    ).getDate();
+
+
+brideHennaDays.innerHTML = "";
+
+
+/* الفراغات قبل أول يوم */
+
+for (
+    let i = 0;
+    i < brideFirstDay;
+    i++
+) {
+
+    const empty =
+        document.createElement("span");
+
+    empty.classList.add("empty");
+
+    brideHennaDays.appendChild(empty);
+
+}
+
+
+/* أرقام الشهر */
+
+for (
+    let day = 1;
+    day <= brideDaysInMonth;
+    day++
+) {
+
+    const dayElement =
+        document.createElement("span");
+
+    dayElement.textContent = day;
+
+
+    if (
+        day === brideHennaDay
+    ) {
+
+        dayElement.classList.add(
+            "selected-day"
+        );
+
+    }
+
+
+    brideHennaDays.appendChild(
+        dayElement
+    );
+
+}
+
+
+/* ========================================
+   تاريخ حنة نيره
+======================================== */
+
+const brideHennaDate =
+    new Date(
+        brideHennaYear,
+        brideHennaMonth,
+        brideHennaDay
+    );
+
+
+brideHennaDateText.textContent =
+    `${arabicDays[brideHennaDate.getDay()]}، ${brideHennaDay} ${monthNames[brideHennaMonth]} ${brideHennaYear}`;
+    document
+.getElementById("coverOpen")
+.addEventListener("click",()=>{
+
+document
+.querySelector(".invitation-card")
+.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+});
 });
