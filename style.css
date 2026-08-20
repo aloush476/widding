@@ -27,6 +27,72 @@ body {
 }
 
 
+.audio-toggle {
+
+    position: fixed;
+
+    top: 50%;
+
+    right: 18px;
+
+    z-index: 1000;
+
+    width: 48px;
+
+    height: 48px;
+
+    border: 1px solid rgba(212,175,55,.65);
+
+    border-radius: 50%;
+
+    background: #102a43;
+
+    color: #ffffff;
+
+    font-size: 19px;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 22px rgba(0,0,0,.2);
+
+    transform: translateY(-50%);
+
+    transition: transform .3s ease, background .3s ease;
+
+}
+
+
+.audio-toggle:hover {
+
+    background: #173760;
+
+    transform: translateY(-50%) scale(1.08);
+
+}
+
+
+.audio-toggle.is-playing {
+
+    border-color: #d4af37;
+
+}
+
+
+@media (max-width: 600px) {
+
+    .audio-toggle {
+
+        right: 12px;
+
+        width: 43px;
+
+        height: 43px;
+
+    }
+
+}
+
+
 
 /* ========================================
    LOADER

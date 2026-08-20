@@ -131,6 +131,15 @@ setInterval(updateCountdown, 1000);
 const openButton =
     document.getElementById("openInvitation");
 
+const weddingAudio =
+    document.getElementById("weddingAudio");
+
+const audioToggle =
+    document.getElementById("audioToggle");
+
+const audioIcon =
+    document.getElementById("audioIcon");
+
 
 openButton.addEventListener("click", () => {
 
@@ -141,6 +150,40 @@ openButton.addEventListener("click", () => {
         behavior: "smooth"
 
     });
+
+    weddingAudio.muted = false;
+
+    weddingAudio.play().then(() => {
+        audioToggle.classList.add("is-playing");
+        audioToggle.setAttribute("aria-label", "كتم الصوت");
+        audioToggle.setAttribute("aria-pressed", "true");
+        audioIcon.textContent = "🔊";
+    }).catch(() => {
+        audioIcon.textContent = "🔇";
+    });
+
+});
+
+
+audioToggle.addEventListener("click", () => {
+
+    if (weddingAudio.paused) {
+        weddingAudio.muted = false;
+        weddingAudio.play();
+    } else {
+        weddingAudio.muted = !weddingAudio.muted;
+    }
+
+    const isMuted = weddingAudio.muted;
+
+    audioToggle.classList.toggle("is-muted", isMuted);
+    audioToggle.classList.toggle("is-playing", !isMuted);
+    audioToggle.setAttribute(
+        "aria-label",
+        isMuted ? "تشغيل الصوت" : "كتم الصوت"
+    );
+    audioToggle.setAttribute("aria-pressed", String(!isMuted));
+    audioIcon.textContent = isMuted ? "🔇" : "🔊";
 
 });
 
