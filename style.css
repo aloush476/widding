@@ -31,7 +31,7 @@ body {
 
     position: fixed;
 
-    top: 50%;
+    bottom: 20px;
 
     right: 18px;
 
@@ -55,8 +55,6 @@ body {
 
     box-shadow: 0 8px 22px rgba(0,0,0,.2);
 
-    transform: translateY(-50%);
-
     transition: transform .3s ease, background .3s ease;
 
 }
@@ -66,7 +64,7 @@ body {
 
     background: #173760;
 
-    transform: translateY(-50%) scale(1.08);
+    transform: scale(1.08);
 
 }
 
@@ -83,6 +81,8 @@ body {
     .audio-toggle {
 
         right: 12px;
+
+        bottom: 12px;
 
         width: 43px;
 
