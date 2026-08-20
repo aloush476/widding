@@ -224,7 +224,7 @@ body {
 
     background-repeat: no-repeat;
 
-    background-attachment: fixed;
+    background-attachment: scroll;
 }
 
 
@@ -959,40 +959,6 @@ body {
 }
 
 
-
-/* ========================================
-   EVENT CARD
-======================================== */
-
-.event-card {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 30px;
-
-    padding:
-        35px;
-
-    background:
-        #f8f5ed;
-
-    border:
-        1px solid
-        rgba(212,175,55,.35);
-
-    border-radius: 5px;
-
-    box-shadow:
-        0 20px 50px
-        rgba(0,0,0,.2);
-
-    direction: ltr;
-}
-
-
-
 /* ========================================
    REAL CALENDAR
 ======================================== */
@@ -1325,7 +1291,7 @@ body {
 
     top: 10%;
 
-    left: -25px;
+    left: 0;
 }
 
 
@@ -1333,7 +1299,7 @@ body {
 
     bottom: 8%;
 
-    right: -25px;
+    right: 0;
 
     animation-delay: 2s;
 }
@@ -1540,7 +1506,7 @@ body {
 
     top: 12%;
 
-    left: -30px;
+    left: 0;
 
 }
 
@@ -1549,7 +1515,7 @@ body {
 
     bottom: 10%;
 
-    right: -30px;
+    right: 0;
 
     animation-delay: 2s;
 
@@ -1686,168 +1652,6 @@ body {
 
 }
 
-/*==========================
-Cover Card
-===========================*/
-
-.cover-card{
-
-width:min(420px,92%);
-
-margin:40px auto;
-
-background:#f9f7f2;
-
-border:1px solid #d8c7a2;
-
-padding:70px 30px;
-
-position:relative;
-
-text-align:center;
-
-box-shadow:0 15px 40px rgba(0,0,0,.2);
-
-overflow:hidden;
-
-}
-
-
-.cover-flower{
-
-position:absolute;
-
-width:120px;
-
-height:180px;
-
-background-size:contain;
-
-background-repeat:no-repeat;
-
-opacity:.95;
-
-}
-
-.flower-left{
-
-left:-5px;
-
-top:-5px;
-
-background-image:url("images/flower-left.png");
-
-}
-
-.flower-right{
-
-right:-5px;
-
-bottom:20px;
-
-background-image:url("images/flower-right.png");
-
-}
-
-.cover-heart{
-
-width:70px;
-
-height:70px;
-
-margin:auto;
-
-border-radius:50%;
-
-background:#173760;
-
-color:#fff;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-font-size:28px;
-
-animation:heartBeat 2s infinite;
-
-margin-bottom:35px;
-
-}
-
-.cover-small{
-
-letter-spacing:4px;
-
-font-size:11px;
-
-color:#9d8350;
-
-}
-
-.cover-title{
-
-margin:20px 0;
-
-color:#0d2143;
-
-}
-
-.cover-names{
-
-font-size:52px;
-
-margin:15px 0;
-
-font-family:"Cormorant Garamond",serif;
-
-color:#18345f;
-
-}
-
-.cover-date{
-
-margin:25px 0;
-
-font-size:20px;
-
-color:#7f6941;
-
-}
-
-.cover-text{
-
-line-height:2;
-
-margin-bottom:35px;
-
-}
-
-.cover-button{
-
-padding:15px 45px;
-
-background:#173760;
-
-color:#fff;
-
-border:none;
-
-cursor:pointer;
-
-font-size:18px;
-
-transition:.3s;
-
-}
-
-.cover-button:hover{
-
-transform:translateY(-4px);
-
-}
 /*==========================
 Henna V2
 ==========================*/
