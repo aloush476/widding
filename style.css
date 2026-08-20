@@ -351,27 +351,13 @@ img {
 
     z-index: 5;
 
-    width: 270px;
+    width: 180px;
 
-    height: 165px;
+    height: 180px;
 
     margin:
         0 auto
         25px;
-}
-
-
-.person-photo {
-
-    position: absolute;
-
-    top: 0;
-
-    width: 160px;
-
-    height: 160px;
-
-    border-radius: 50%;
 
     overflow: hidden;
 
@@ -379,34 +365,17 @@ img {
         4px solid
         #b89535;
 
+    border-radius: 50%;
+
     background: #eee;
 
     box-shadow:
         0 12px 30px
         rgba(80,60,10,.18);
-
-    transition:
-        transform .5s ease;
 }
 
 
-.bride-photo {
-
-    left: 3px;
-
-    z-index: 2;
-}
-
-
-.groom-photo {
-
-    right: 3px;
-
-    z-index: 1;
-}
-
-
-.person-photo img {
+.couple-images img {
 
     width: 100%;
 
@@ -416,22 +385,20 @@ img {
 
     object-fit: cover;
 
+    transform:
+        translateX(7px)
+        scale(1.08);
+
     transition:
         transform .6s ease;
 }
 
 
-.person-photo:hover {
+.couple-images:hover img {
 
     transform:
-        translateY(-7px);
-}
-
-
-.person-photo:hover img {
-
-    transform:
-        scale(1.08);
+    translateX(7px)
+    scale(1.12);
 }
 
 
@@ -1580,18 +1547,11 @@ img {
 
 
     .couple-images {
-        width: 220px;
+        width: 130px;
 
-        height: 125px;
+        height: 130px;
 
         margin-bottom: 15px;
-    }
-
-
-    .person-photo {
-        width: 120px;
-
-        height: 120px;
     }
 
 
