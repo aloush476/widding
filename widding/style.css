@@ -1,0 +1,1772 @@
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+
+    overflow-x: hidden;
+}
+
+
+body {
+    min-height: 100vh;
+
+    width: 100%;
+
+    overflow-x: hidden;
+
+    background: #ffffff;
+
+    color: rgb(0, 0, 0);
+
+    font-family: "Cairo", sans-serif;
+
+    touch-action: pan-y;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+
+.audio-toggle {
+
+    position: fixed;
+
+    bottom: 20px;
+
+    right: 18px;
+
+    z-index: 1000;
+
+    width: 48px;
+
+    height: 48px;
+
+    border: 1px solid rgba(212,175,55,.65);
+
+    border-radius: 50%;
+
+    background: #102a43;
+
+    color: #ffffff;
+
+    font-size: 19px;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 22px rgba(0,0,0,.2);
+
+    transition: transform .3s ease, background .3s ease;
+
+}
+
+
+.audio-toggle:hover {
+
+    background: #173760;
+
+    transform: scale(1.08);
+
+}
+
+
+.audio-toggle.is-playing {
+
+    border-color: #d4af37;
+
+}
+
+
+@media (max-width: 600px) {
+
+    .audio-toggle {
+
+        right: 12px;
+
+        bottom: 12px;
+
+        width: 43px;
+
+        height: 43px;
+
+    }
+
+}
+
+
+
+/* ========================================
+   LOADER
+======================================== */
+
+.loader {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 99999;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #102a43;
+
+    transition:
+        opacity .8s ease,
+        visibility .8s ease;
+}
+
+
+.loader.hide {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+}
+
+
+.loader-heart {
+
+    color: white;
+
+    font-size: 58px;
+
+    animation: heartbeat 1.2s infinite;
+
+}
+
+
+.loader-text {
+
+    margin-top: 12px;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    color: rgba(255,255,255,.8);
+
+}
+
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.22);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.17);
+    }
+
+    70% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 50px 20px;
+
+    overflow: hidden;
+
+    /*
+       صورة الخلفية الرئيسية
+    */
+
+    background-image:
+
+        linear-gradient(
+            rgba(16,42,67,.72),
+            rgba(16,42,67,.72)
+        ),
+
+        url("images/main-bg.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: scroll;
+}
+
+
+
+/* ========================================
+   INVITATION CARD
+======================================== */
+
+.invitation-card {
+
+    position: relative;
+
+    width: 100%;
+
+    text-align: center;
+
+    min-height: 650px;
+
+    padding:
+        60px
+        30px
+        45px;
+
+    color: #a78327;
+
+    border-radius: 5px;
+
+    border:
+        1px solid
+        rgba(184,149,53,.55);
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,.35);
+
+    outline:
+        1px solid
+        rgba(184,149,53,.3);
+
+    outline-offset: -10px;
+
+    overflow: hidden;
+
+    /*
+       صورة خلفية الكارت
+    */
+
+    background-image:
+
+        linear-gradient(
+            rgba(248,245,237,.78),
+            rgba(248,245,237,.78)
+        ),
+
+        url("images/card-bg.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+}
+
+/* ========================================
+   INITIALS
+======================================== */
+
+.initials {
+
+    position: relative;
+
+    z-index: 5;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 15px;
+
+    color: #a78327;
+
+    font-family:
+        "Libre Baskerville",
+        cursive;
+
+    font-size: 54px;
+}
+
+
+.initial-heart {
+
+    color: #b89535;
+
+    font-size: 21px;
+
+    animation:
+        heartbeat 1.6s infinite;
+}
+
+
+
+/* ========================================
+   IMAGES
+======================================== */
+
+.couple-images {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: 180px;
+
+    height: 180px;
+
+    margin:
+        0 auto
+        25px;
+
+    overflow: hidden;
+
+    border:
+        4px solid
+        #b89535;
+
+    border-radius: 50%;
+
+    background: #eee;
+
+    box-shadow:
+        0 12px 30px
+        rgba(80,60,10,.18);
+}
+
+
+.couple-images img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transform:
+        translateX(7px)
+        scale(1.08);
+
+    transition:
+        transform .6s ease;
+}
+
+
+.couple-images:hover img {
+
+    transform:
+    translateX(7px)
+    scale(1.12);
+}
+
+
+
+/* ========================================
+   NAMES
+======================================== */
+
+.names {
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+.names h1 {
+
+    color: #a78327;
+
+    font-family:
+        "Reem Kufi",
+        cursive;
+
+    font-size:
+        clamp(48px,11vw,72px);
+
+    font-weight: 400;
+
+    line-height: 1.2;
+}
+
+
+.names h1 span {
+
+    margin:
+        0 7px;
+
+    color: #b89535;
+}
+
+
+.names p {
+
+    margin-top: 8px;
+
+    margin-bottom: 25px;
+
+    color:
+        rgba(120,90,20,.7);
+
+    font-size: 13px;
+}
+
+
+
+/* ========================================
+   DATE
+======================================== */
+
+.wedding-date {
+
+    position: relative;
+
+    z-index: 5;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding:
+        10px 24px;
+
+    margin-bottom: 25px;
+
+    border-top:
+        1px solid
+        rgba(184,149,53,.45);
+
+    border-bottom:
+        1px solid
+        rgba(184,149,53,.45);
+}
+
+
+.date-number {
+
+    color: #a78327;
+
+    font-size: 45px;
+
+    font-weight: 600;
+
+    line-height: 1;
+}
+
+
+.date-details {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+.date-details strong {
+
+    color: #a78327;
+
+    font-size: 19px;
+}
+
+
+.date-details small {
+
+    color:
+        rgba(120,90,20,.65);
+
+    font-size: 12px;
+}
+
+
+
+/* ========================================
+   COUNTDOWN
+======================================== */
+
+.countdown {
+
+    position: relative;
+
+    z-index: 5;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 7px;
+
+    direction: ltr;
+}
+
+
+.time-box {
+
+    min-width: 55px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+.time-box span {
+
+    color: #a78327;
+
+    font-size: 24px;
+
+    font-weight: 600;
+}
+
+
+.time-box small {
+
+    margin-top: 6px;
+
+    color:
+        rgba(120,90,20,.65);
+
+    font-size: 10px;
+}
+
+
+.separator {
+
+    color: #b89535;
+
+    font-size: 22px;
+
+    margin-top: -14px;
+}
+
+
+
+/* ========================================
+   OPEN BUTTON
+======================================== */
+
+.open-button {
+
+    width: fit-content;
+
+    margin: 25px auto 0;
+
+    border: none;
+
+    border-radius: 50px;
+
+    padding:
+        14px 32px;
+
+    background: #d4af37;
+
+    color: #102a43;
+
+    font-family:
+        "Cairo",
+        sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(212,175,55,.25);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+
+.open-button:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 15px 40px
+        rgba(212,175,55,.4);
+}
+
+
+
+/* ========================================
+   SCROLL HINT
+======================================== */
+
+.scroll-hint {
+
+    margin-top: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 3px;
+
+    color:
+        rgba(255,255,255,.55);
+
+    font-size: 11px;
+}
+
+
+.arrow {
+
+    font-size: 20px;
+
+    animation:
+        arrowMove 1.5s infinite;
+}
+
+
+@keyframes arrowMove {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+
+}
+
+
+
+/* ========================================
+   BACKGROUND FLOWERS
+======================================== */
+
+.background-flower {
+
+    position: absolute;
+
+    z-index: 1;
+
+    color:
+        rgba(255,255,255,.09);
+
+    font-size: 80px;
+
+    pointer-events: none;
+
+    animation:
+        flowerFloat 7s ease-in-out infinite;
+}
+
+
+.flower-1 {
+
+    top: 5%;
+
+    left: 4%;
+}
+
+
+.flower-2 {
+
+    top: 20%;
+
+    right: 4%;
+
+    font-size: 55px;
+
+    animation-delay: 1s;
+}
+
+
+.flower-3 {
+
+    bottom: 8%;
+
+    left: 7%;
+
+    font-size: 65px;
+
+    animation-delay: 2s;
+}
+
+
+.flower-4 {
+
+    bottom: 15%;
+
+    right: 7%;
+
+    font-size: 90px;
+
+    animation-delay: 3s;
+}
+
+
+@keyframes flowerFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translateY(-15px)
+            rotate(8deg);
+    }
+
+}
+
+
+
+/* ==================================================
+   قسم تفاصيل الفرح
+================================================== */
+
+.details-section {
+
+    position: relative;
+
+    min-height: auto;
+
+    padding:
+        70px 20px 50px;
+
+    background:
+        #ffffff;
+
+    overflow: hidden;
+}
+
+
+.details-container {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+
+    max-width: 600px;
+
+    margin: auto;
+}
+
+
+/* ========================================
+   تذييل الصفحة
+======================================== */
+
+.site-footer {
+
+    margin-top: 2cm;
+
+    padding: 45px 20px 30px;
+
+    background: #102a43;
+
+    color: rgba(255,255,255,.78);
+
+    text-align: center;
+}
+
+
+.footer-heart {
+
+    margin-bottom: 8px;
+
+    color: #d4af37;
+
+    font-size: 22px;
+
+    animation: heartbeat 1.6s infinite;
+}
+
+
+.footer-names {
+
+    color: #d4af37;
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 34px;
+}
+
+
+.footer-names span {
+
+    margin: 0 5px;
+
+    color: #ffffff;
+}
+
+
+.footer-message {
+
+    margin-top: 8px;
+
+    font-size: 13px;
+}
+
+
+.footer-date {
+
+    margin-top: 14px;
+
+    color: rgba(255,255,255,.55);
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+
+/* ========================================
+   عنوان القسم
+======================================== */
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+
+.title-small {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color:
+        rgba(2, 2, 2, 0.55);
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+}
+
+
+.section-title h2 {
+
+    color: rgb(0, 0, 0);
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size: 58px;
+
+    font-weight: 400;
+}
+
+
+.title-line {
+
+    margin-top: 10px;
+
+    color: #d4af37;
+
+    font-size: 18px;
+}
+
+
+/* ========================================
+   REAL CALENDAR
+======================================== */
+
+.event-card {
+    display: flex;
+    flex-direction: column;
+
+    gap: 28px;
+
+    padding: 30px 25px;
+
+    background: #f8f5ed;
+
+    border: 1px solid rgba(212,175,55,.35);
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.2);
+
+    direction: ltr;
+}
+
+
+/* الكالندر */
+
+.real-calendar {
+    width: 100%;
+    max-width: 390px;
+
+    margin: auto;
+
+    padding: 20px;
+
+    background: #fffdf8;
+
+    border: 1px solid rgba(184,149,53,.35);
+
+    box-shadow:
+        0 10px 30px rgba(80,60,10,.10);
+}
+
+
+/* اسم الشهر */
+
+.calendar-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+
+    direction: rtl;
+}
+
+.calendar-header strong {
+    color: #a78327;
+
+    font-size: 20px;
+
+    font-weight: 600;
+}
+
+.calendar-header span {
+    color: rgba(167,131,39,.4);
+
+    font-size: 25px;
+}
+
+
+/* أيام الأسبوع */
+
+.calendar-weekdays,
+.calendar-days {
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    text-align: center;
+}
+
+
+.calendar-weekdays {
+    margin-bottom: 10px;
+}
+
+.calendar-weekdays span {
+    color: rgba(120,90,20,.55);
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+
+/* الأرقام */
+
+.calendar-days {
+    row-gap: 8px;
+}
+
+.calendar-days span {
+    position: relative;
+
+    width: 35px;
+    height: 35px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #765d24;
+
+    font-size: 12px;
+
+    border-radius: 50%;
+}
+
+
+/* اليوم المحدد */
+
+.calendar-days .selected-day {
+    background: #b89535;
+
+    color: white;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 5px 15px
+        rgba(184,149,53,.35);
+}
+
+
+/* قلب صغير تحت يوم 25 */
+
+.calendar-days .selected-day::after {
+    content: "♥";
+
+    position: absolute;
+
+    bottom: -12px;
+
+    color: #b89535;
+
+    font-size: 9px;
+}
+
+
+/* المعلومات */
+
+.event-info {
+    direction: rtl;
+
+    text-align: center;
+
+    width: 100%;
+}
+
+.event-info h3 {
+    margin-bottom: 18px;
+
+    color: #a78327;
+
+    font-size: 25px;
+}
+
+.event-detail {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-bottom: 10px;
+
+    color: rgba(9, 15, 20, 0.75);
+
+    font-size: 18px;
+}
+
+.venue-link {
+    color: inherit;
+
+    text-decoration: underline;
+
+    text-decoration-color: rgba(167,131,39,.55);
+
+    text-underline-offset: 4px;
+
+    transition: color .3s ease;
+}
+
+.venue-link:hover {
+    color: #a78327;
+}
+
+.detail-icon {
+    font-size: 18px;
+}
+
+
+/* الموبايل */
+
+@media (max-width: 600px) {
+
+    .event-card {
+        padding: 25px 15px;
+    }
+
+    .real-calendar {
+        padding: 16px 10px;
+    }
+
+    .calendar-days span {
+        width: 32px;
+        height: 32px;
+    }
+
+}
+/* ========================================
+   ADD TO CALENDAR
+======================================== */
+
+.calendar-button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin:
+        30px auto 0;
+
+    padding:
+        13px 28px;
+
+    border:
+        1px solid
+        #d4af37;
+
+    border-radius: 50px;
+
+    background:
+        transparent;
+
+    color: rgb(49, 49, 49);
+
+    font-family:
+        "Cairo",
+        sans-serif;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition:
+        all .3s ease;
+}
+
+
+.calendar-button span {
+
+    font-size: 20px;
+
+    line-height: 1;
+}
+
+
+.calendar-button:hover {
+
+    background:
+        #d4af37;
+
+    color:
+        #102a43;
+
+    transform:
+        translateY(-3px);
+}
+
+
+.calendar-note {
+
+    margin-top: 18px;
+
+    text-align: center;
+
+    color:
+        rgba(31, 31, 31, 0.5);
+
+    font-size: 13px;
+}
+
+
+
+/* ========================================
+   FLOWERS DETAILS
+======================================== */
+
+.section-flower {
+
+    position: absolute;
+
+    color:
+        rgba(255,255,255,.06);
+
+    font-size: 120px;
+
+    pointer-events: none;
+
+    animation:
+        flowerFloat 8s infinite;
+}
+
+
+.section-flower-1 {
+
+    top: 10%;
+
+    left: 0;
+}
+
+
+.section-flower-2 {
+
+    bottom: 8%;
+
+    right: 0;
+
+    animation-delay: 2s;
+}
+
+
+
+/* ========================================
+   SCROLL REVEAL
+======================================== */
+
+.reveal {
+
+    opacity: 0;
+
+    transform:
+        translateY(45px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+
+.reveal.show {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .hero {
+
+        padding:
+            30px 15px;
+    }
+
+
+    .invitation-card {
+
+        min-height: 620px;
+
+        padding:
+            55px 18px 40px;
+    }
+
+
+    .event-card {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 22px;
+
+        padding: 30px 20px;
+    }
+
+
+    .event-info {
+
+        text-align: center;
+    }
+
+
+    .event-detail {
+
+        justify-content: center;
+    }
+
+
+    .calendar-icon {
+
+        width: 120px;
+
+        height: 135px;
+    }
+
+
+    .section-title h2 {
+
+        font-size: 50px;
+    }
+
+
+    .card-flower {
+
+        font-size: 70px;
+    }
+
+}
+
+
+/* ========================================
+   HENNA SECTION
+======================================== */
+
+.henna-section {
+
+    position: relative;
+
+    min-height: auto;
+
+    padding:
+        55px 20px;
+
+    background:
+        #ffffff;
+
+    overflow: hidden;
+
+}
+
+
+/* ========================================
+   وقت الحنة
+======================================== */
+
+.henna-time {
+
+    width: fit-content;
+
+    margin:
+        25px auto 0;
+
+    padding:
+        13px 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border:
+        1px solid
+        rgba(212,175,55,.35);
+
+    border-radius:
+        50px;
+
+    background:
+        rgba(248,245,237,.05);
+
+    color: white;
+
+    direction: rtl;
+
+}
+
+
+.henna-time-icon {
+
+    font-size: 20px;
+
+}
+
+
+.henna-time div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+}
+
+
+.henna-time small {
+
+    color:
+        rgba(255,255,255,.5);
+
+    font-size: 10px;
+
+}
+
+
+.henna-time strong {
+
+    color:
+        #d4af37;
+
+    font-size: 15px;
+
+}
+
+
+
+/* ========================================
+   زخارف الحنة
+======================================== */
+
+.henna-flower-1 {
+
+    top: 12%;
+
+    left: 0;
+
+}
+
+
+.henna-flower-2 {
+
+    bottom: 10%;
+
+    right: 0;
+
+    animation-delay: 2s;
+
+}
+
+
+
+/* ========================================
+   Mobile
+======================================== */
+
+@media (max-width: 600px) {
+
+    .henna-section {
+
+        padding:
+            80px 15px;
+
+    }
+
+
+    .henna-time {
+
+        padding:
+            11px 22px;
+
+    }
+
+}
+/* ========================================
+   تصغير كارت الدعوة على الموبايل
+======================================== */
+
+@media (max-width: 600px) {
+
+    .invitation-card {
+        min-height: 0;
+
+        padding:
+            40px
+            18px
+            30px;
+    }
+
+
+    .initials {
+        font-size: 45px;
+
+        margin-bottom: 8px;
+    }
+
+
+    .couple-images {
+        width: 130px;
+
+        height: 130px;
+
+        margin-bottom: 15px;
+    }
+
+
+    .names h1 {
+        font-size: 48px;
+    }
+
+
+    .names p {
+        margin-top: 4px;
+
+        margin-bottom: 15px;
+
+        font-size: 10px;
+    }
+
+
+    .wedding-date {
+        margin-bottom: 15px;
+
+        padding:
+            8px
+            20px;
+    }
+
+
+    .date-number {
+        font-size: 38px;
+    }
+
+
+    .date-details strong {
+        font-size: 16px;
+    }
+
+
+    .countdown {
+        gap: 3px;
+    }
+
+
+    .time-box {
+        min-width: 43px;
+    }
+
+
+    .time-box span {
+        font-size: 19px;
+    }
+
+
+    .time-box small {
+        margin-top: 3px;
+
+        font-size: 9px;
+    }
+
+
+    .separator {
+        font-size: 16px;
+
+        margin-top: -10px;
+    }
+
+
+    .card-flower {
+        font-size: 60px;
+    }
+
+}
+
+/*==========================
+Henna V2
+==========================*/
+
+.henna-card{
+
+max-width:650px;
+
+margin:auto;
+
+padding:55px 35px;
+
+background:#faf8f4;
+
+border:1px solid #ddd2bf;
+
+text-align:center;
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.henna-en{
+
+letter-spacing:4px;
+
+font-size:11px;
+
+color:#9d8350;
+
+margin-bottom:18px;
+
+}
+
+.henna-ar{
+
+font-size:42px;
+
+color:#142b50;
+
+margin-bottom:25px;
+
+}
+
+.henna-place{
+
+font-size:22px;
+
+margin-bottom:35px;
+
+color:#333;
+
+}
+
+.henna-line{
+
+height:1px;
+
+background:#d9d1c1;
+
+margin:35px 0;
+
+}
+
+.henna-lines{
+
+height:1px;
+
+background:#363636;
+
+margin:35px 0;
+
+}
+
+.henna-info{
+
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+text-align:right;
+
+}
+
+.henna-icon{
+
+font-size:28px;
+
+color:#9d8350;
+
+}
+
+.henna-info strong{
+
+display:block;
+
+font-size:22px;
+
+color:#1d2d4f;
+
+margin-bottom:8px;
+
+}
+
+.henna-info small{
+
+color:#8f8f8f;
+
+font-size:15px;
+
+}
+
+@media(max-width:600px){
+
+.henna-card{
+
+padding:40px 22px;
+
+}
+
+.henna-ar{
+
+font-size:30px;
+
+}
+
+.henna-place{
+
+font-size:18px;
+
+}
+
+.henna-info{
+
+flex-direction:row;
+
+gap:12px;
+
+}
+
+.henna-info strong{
+
+font-size:16px;
+
+}
+
+}
