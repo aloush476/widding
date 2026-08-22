@@ -418,7 +418,7 @@ img {
     color: #a78327;
 
     font-family:
-        "Reem Kufi",
+        "Cormorant Garamond",
         cursive;
 
     font-size:
@@ -849,7 +849,7 @@ img {
 
     color: #d4af37;
 
-    font-family: "Great Vibes", cursive;
+    font-family: "Cormorant Garamond", cursive;
 
     font-size: 34px;
 }
@@ -916,7 +916,7 @@ img {
     color: rgb(0, 0, 0);
 
     font-family:
-        "Great Vibes",
+        "Cormorant Garamond",
         cursive;
 
     font-size: 58px;
@@ -1528,95 +1528,79 @@ img {
 @media (max-width: 600px) {
 
     .invitation-card {
+        width: 90%;
         min-height: 0;
 
-        padding:
-            40px
-            18px
-            30px;
+        padding: 30px 14px 25px;
+
+        margin: 0 auto;
     }
-
-
-    .initials {
-        font-size: 45px;
-
-        margin-bottom: 8px;
-    }
-
 
     .couple-images {
-        width: 130px;
+        width: 190px;
+        height: 105px;
 
-        height: 130px;
-
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
 
+    .person-photo {
+        width: 105px;
+        height: 105px;
+
+        border-width: 3px;
+    }
+
+    .initials {
+        font-size: 38px;
+        margin-bottom: 5px;
+    }
 
     .names h1 {
-        font-size: 48px;
+        font-size: 40px;
     }
 
-
     .names p {
-        margin-top: 4px;
+        font-size: 9px;
+        margin-bottom: 12px;
+    }
 
-        margin-bottom: 15px;
+    .wedding-date {
+        padding: 6px 15px;
+        margin-bottom: 12px;
+    }
 
+    .date-number {
+        font-size: 32px;
+    }
+
+    .date-details strong {
+        font-size: 14px;
+    }
+
+    .date-details small {
         font-size: 10px;
     }
 
-
-    .wedding-date {
-        margin-bottom: 15px;
-
-        padding:
-            8px
-            20px;
-    }
-
-
-    .date-number {
-        font-size: 38px;
-    }
-
-
-    .date-details strong {
-        font-size: 16px;
-    }
-
-
     .countdown {
-        gap: 3px;
+        gap: 2px;
     }
-
 
     .time-box {
-        min-width: 43px;
+        min-width: 38px;
     }
-
 
     .time-box span {
-        font-size: 19px;
+        font-size: 17px;
     }
-
 
     .time-box small {
-        margin-top: 3px;
-
-        font-size: 9px;
+        font-size: 8px;
+        margin-top: 2px;
     }
-
 
     .separator {
-        font-size: 16px;
-
-        margin-top: -10px;
-    }
-
-
-    .card-flower {
-        font-size: 60px;
+        font-size: 14px;
+        margin-top: -8px;
     }
 
 }
