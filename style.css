@@ -1528,7 +1528,7 @@ img {
 @media (max-width: 600px) {
 
     .invitation-card {
-        width: 90%;
+        width: 100%;
         min-height: 0;
 
         padding: 30px 14px 25px;
